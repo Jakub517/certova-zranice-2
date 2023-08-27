@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kámen, nůžky, papír</title>
+  <link rel="stylesheet" href="cert-medved-had.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <h1>Čert, Medvěd, Had, Teď!</h1>
+    <button class="home-button" onclick="goHome()">Domů</button>
+    <div class="game">
+      <div class="score">
+        <span>Skóre:</span>
+        <span id="userScore">0</span> : <span id="computerScore">0</span>
+      </div>
+      <div class="choices">
+        <button class="choice rock" onclick="playGame('cert')">Čert🦡</button>
+        <button class="choice scissors" onclick="playGame('medved')">Medvěd🧸</button>
+        <button class="choice paper" onclick="playGame('had')">Had🐍</button>
+      </div>
+      <div class="result" id="result"></div>
+    </div>
+    <div class="selections">
+      <div class="selection user" id="userSelection"></div>
+      <div class="selection computer" id="computerSelection"></div>
+    </div>
+  </div>
+  <script src="cert-medved-had.js"></script>
+</body>
+</html>

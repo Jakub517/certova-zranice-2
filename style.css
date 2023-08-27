@@ -1,0 +1,216 @@
+body {
+    font-family: 'Copperplate', 'Papyrus', fantasy;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #001d3d, #0d0d0d);
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 4.5rem;
+    color: #d62246;
+    text-shadow: 0 0 10px rgba(214, 34, 70, 0.8);
+  }
+  
+  .game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  input {
+    padding: 15px;
+    width: 70%;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  button {
+    padding: 15px 30px;
+    background-color: #d62246;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(214, 34, 70, 0.5);
+  }
+  
+  button:hover {
+    background-color: #95132c;
+  }
+  
+  .log-container {
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vomit-container {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #d62246;
+    text-shadow: 0 0 10px rgba(214, 34, 70, 0.8);
+    display: none;
+    animation: vomit-text 3s ease-in-out;
+  }
+  
+  @keyframes vomit-text {
+    0%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+  }
+  
+  .vomiting {
+    display: block;
+    animation: vomit 3s ease-in-out, vomit-animation 5s steps(2, start);
+  }
+  
+  @keyframes vomit {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(90deg) translateY(-20px); }
+  }
+  
+  @keyframes vomit-animation {
+    0% { background-position: 0 0; }
+    100% { background-position: -60px 0; }
+  }
+  
+  #logList {
+    padding-left: 30px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  
+  #logList li {
+    list-style-type: square;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    color: #f7ca8f;
+  }
+  
+  #logList li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #d62246;
+    font-size: 1.8rem;
+  }
+
+  /* Ponechte si zde váš stávající CSS kód */
+
+.game-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .game-menu h2 {
+    margin-top: 0;
+  }
+  
+  .game-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .game-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .game-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .game-menu a:hover {
+    color: #d62246;
+  }
+
+  /* Ponechte si zde váš stávající CSS kód */
+
+.menu-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 4px;
+    background-color: #222;
+    transition: transform 0.3s;
+  }
+  
+  .menu-button.open .menu-icon:nth-child(1) {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  
+  .menu-button.open .menu-icon:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-button.open .menu-icon:nth-child(3) {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+
+  
+  

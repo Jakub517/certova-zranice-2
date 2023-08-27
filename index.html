@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Čertova Žranice 2</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Čertova žranice 2</h1>
+  </header>
+  <div class="game-container">
+    <div class="input-container">
+      <input type="text" id="itemInput" placeholder="Napiš věc, kterou má čert sníst..." onkeydown="if (event.key === 'Enter') feedDevil()">
+      <button onclick="feedDevil()">Krmit čerta</button>
+    </div>
+    <div class="log-container">
+      <h2>Co čert snědl:</h2>
+      <ul id="logList"></ul>
+    </div>
+    <div id="vomitContainer" class="vomit-container"></div>
+    <div class="menu-bar">
+      <div id="gameMenu" class="game-menu">
+        <h2>Vyberte další hru:</h2>
+        <ul>
+          <li><a href="vtip.html">Čertovi vtipy</a></li>
+          <li><a href="pocasi.html">Čertovo počasí</a></li>
+          <li><a href="cert-medved-had.html">Čert Medvěd Had Teď!</a></li>
+          <li><a href="malovani.html">Malování</a></li>
+        </ul>
+      </div>
+      <button class="menu-button" onclick="toggleMenu()">
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+      </button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Předpověď počasí</title>
+    <link rel="stylesheet" href="pocasi.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Čertovo počasí</h1>
+        <a href="index.html" class="home-button">Domů</a>
+        <div class="input-container">
+            <input type="text" id="cityInput" class="input" placeholder="Zadejte město">
+            <button id="searchButton" class="button">Hledat</button>
+        </div>
+        <div class="weather-info">
+            <div class="weather-details">
+                <p class="detail"><strong>Město:</strong> <span id="cityName"></span></p>
+                <p class="detail"><strong>Teplota:</strong> <span id="temperature"></span> °C</p>
+                <p class="detail"><strong>Popis:</strong> <span id="description"></span></p>
+            </div>
+            <div class="weather-details">
+                <p class="detail"><strong>Minimální teplota:</strong> <span id="tempMin"></span> °C</p>
+                <p class="detail"><strong>Maximální teplota:</strong> <span id="tempMax"></span> °C</p>
+                <p class="detail"><strong>Vlhkost vzduchu:</strong> <span id="humidity"></span>%</p>
+            </div>
+        </div>
+        <div>
+            <span id="teplota"></span>
+        </div>
+        <canvas id="temperatureChart" class="chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="pocasi.js"></script>
+</body>
+</html>
